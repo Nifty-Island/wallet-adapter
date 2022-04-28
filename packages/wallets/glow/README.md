@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-glow`
+# `@tomlisankie/wallet-adapter-glow`
 
 [Glow](https://glow.app) is an easy-to-use, secure wallet for iOS. We have built a Safari Extension that lets you connect to dApps, sign messages, and approve transactions from the native iOS Safari app.
 

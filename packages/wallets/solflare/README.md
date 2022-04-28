@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-solflare`
+# `@tomlisankie/wallet-adapter-solflare`
 
 <!-- @TODO -->
 

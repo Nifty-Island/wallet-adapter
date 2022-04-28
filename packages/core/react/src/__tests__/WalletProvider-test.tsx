@@ -11,7 +11,7 @@ import {
     WalletName,
     WalletNotReadyError,
     WalletReadyState,
-} from '@solana/wallet-adapter-base';
+} from '@tomlisankie/wallet-adapter-base';
 import { PublicKey } from '@solana/web3.js';
 import 'jest-localstorage-mock';
 import React, { createRef, forwardRef, useImperativeHandle } from 'react';

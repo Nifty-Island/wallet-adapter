@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-bitpie`
+# `@tomlisankie/wallet-adapter-bitpie`
 
 <!-- @TODO -->
 

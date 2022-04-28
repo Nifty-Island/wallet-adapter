@@ -4,19 +4,19 @@ import {
     WalletDisconnectButton as AntDesignWalletDisconnectButton,
     WalletModalButton as AntDesignWalletModalButton,
     WalletMultiButton as AntDesignWalletMultiButton,
-} from '@solana/wallet-adapter-ant-design';
+} from '@tomlisankie/wallet-adapter-ant-design';
 import {
     WalletConnectButton as MaterialUIWalletConnectButton,
     WalletDialogButton as MaterialUIWalletDialogButton,
     WalletDisconnectButton as MaterialUIWalletDisconnectButton,
     WalletMultiButton as MaterialUIWalletMultiButton,
-} from '@solana/wallet-adapter-material-ui';
+} from '@tomlisankie/wallet-adapter-material-ui';
 import {
     WalletConnectButton as ReactUIWalletConnectButton,
     WalletDisconnectButton as ReactUIWalletDisconnectButton,
     WalletModalButton as ReactUIWalletModalButton,
     WalletMultiButton as ReactUIWalletMultiButton,
-} from '@solana/wallet-adapter-react-ui';
+} from '@tomlisankie/wallet-adapter-react-ui';
 import { NextPage } from 'next';
 import { useAutoConnect } from '../components/AutoConnectProvider';
 import { RequestAirdrop } from '../components/RequestAirdrop';

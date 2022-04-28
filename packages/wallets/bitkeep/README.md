@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-bitkeep`
+# `@tomlisankie/wallet-adapter-bitkeep`
 
 <!-- @TODO -->
 

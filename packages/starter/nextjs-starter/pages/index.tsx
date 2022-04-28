@@ -1,4 +1,4 @@
-import { WalletDisconnectButton, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
+import { WalletDisconnectButton, WalletMultiButton } from '@tomlisankie/wallet-adapter-react-ui';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';

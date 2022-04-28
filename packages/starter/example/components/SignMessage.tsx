@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { useWallet } from '@solana/wallet-adapter-react';
+import { useWallet } from '@tomlisankie/wallet-adapter-react';
 import bs58 from 'bs58';
 import { FC, useCallback } from 'react';
 import { sign } from 'tweetnacl';

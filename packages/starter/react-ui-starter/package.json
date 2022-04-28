@@ -1,5 +1,5 @@
 {
-    "name": "@solana/wallet-adapter-react-ui-starter",
+    "name": "@tomlisankie/wallet-adapter-react-ui-starter",
     "version": "0.9.3",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/solana-labs/wallet-adapter",
@@ -29,10 +29,10 @@
         "nuke": "shx rm -rf node_modules yarn.lock"
     },
     "dependencies": {
-        "@solana/wallet-adapter-base": "^0.9.4",
-        "@solana/wallet-adapter-react": "^0.15.3",
-        "@solana/wallet-adapter-react-ui": "^0.9.5",
-        "@solana/wallet-adapter-wallets": "^0.16.0",
+        "@tomlisankie/wallet-adapter-base": "^0.9.4",
+        "@tomlisankie/wallet-adapter-react": "^0.15.3",
+        "@tomlisankie/wallet-adapter-react-ui": "^0.9.5",
+        "@tomlisankie/wallet-adapter-wallets": "^0.16.0",
         "@solana/web3.js": "^1.36.0",
         "react": "^17.0.0",
         "react-dom": "^17.0.0"

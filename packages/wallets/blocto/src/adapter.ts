@@ -14,7 +14,7 @@ import {
     WalletPublicKeyError,
     WalletReadyState,
     WalletSendTransactionError,
-} from '@solana/wallet-adapter-base';
+} from '@tomlisankie/wallet-adapter-base';
 import { Connection, PublicKey, Transaction, TransactionSignature } from '@solana/web3.js';
 
 export interface BloctoWalletAdapterConfig {

@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter`
+# `@tomlisankie/wallet-adapter`
 
 Modular TypeScript wallet adapters and components for Solana applications.
 
@@ -34,10 +34,10 @@ There are also [material-ui](https://github.com/solana-labs/wallet-adapter/tree/
 Install these dependencies:
 
 ```shell
-yarn add @solana/wallet-adapter-base \
-         @solana/wallet-adapter-react \
-         @solana/wallet-adapter-react-ui \
-         @solana/wallet-adapter-wallets \
+yarn add @tomlisankie/wallet-adapter-base \
+         @tomlisankie/wallet-adapter-react \
+         @tomlisankie/wallet-adapter-react-ui \
+         @tomlisankie/wallet-adapter-wallets \
          @solana/web3.js \
          react
 ```
@@ -46,8 +46,8 @@ yarn add @solana/wallet-adapter-base \
 
 ```tsx
 import React, { FC, useMemo } from 'react';
-import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
-import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
+import { ConnectionProvider, WalletProvider } from '@tomlisankie/wallet-adapter-react';
+import { WalletAdapterNetwork } from '@tomlisankie/wallet-adapter-base';
 import {
     GlowWalletAdapter,
     LedgerWalletAdapter,
@@ -57,16 +57,16 @@ import {
     SolletExtensionWalletAdapter,
     SolletWalletAdapter,
     TorusWalletAdapter,
-} from '@solana/wallet-adapter-wallets';
+} from '@tomlisankie/wallet-adapter-wallets';
 import {
     WalletModalProvider,
     WalletDisconnectButton,
     WalletMultiButton
-} from '@solana/wallet-adapter-react-ui';
+} from '@tomlisankie/wallet-adapter-react-ui';
 import { clusterApiUrl } from '@solana/web3.js';
 
 // Default styles that can be overridden by your app
-require('@solana/wallet-adapter-react-ui/styles.css');
+require('@tomlisankie/wallet-adapter-react-ui/styles.css');
 
 export const Wallet: FC = () => {
     // The network can be set to 'devnet', 'testnet', or 'mainnet-beta'.
@@ -75,7 +75,7 @@ export const Wallet: FC = () => {
     // You can also provide a custom RPC endpoint.
     const endpoint = useMemo(() => clusterApiUrl(network), [network]);
 
-    // @solana/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
+    // @tomlisankie/wallet-adapter-wallets includes all the adapters but supports tree shaking and lazy loading --
     // Only the wallets you configure here will be compiled into your application, and only the dependencies
     // of wallets that your users connect to will be loaded.
     const wallets = useMemo(
@@ -106,8 +106,8 @@ export const Wallet: FC = () => {
 ### Usage
 
 ```tsx
-import { WalletNotConnectedError } from '@solana/wallet-adapter-base';
-import { useConnection, useWallet } from '@solana/wallet-adapter-react';
+import { WalletNotConnectedError } from '@tomlisankie/wallet-adapter-base';
+import { useConnection, useWallet } from '@tomlisankie/wallet-adapter-react';
 import { Keypair, SystemProgram, Transaction } from '@solana/web3.js';
 import React, { FC, useCallback } from 'react';
 
@@ -148,8 +148,8 @@ These packages are what most projects can use to support wallets on Solana.
 
 | package                                                                                     | description                                               | npm                                                                                            |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| [base](https://github.com/solana-labs/wallet-adapter/tree/master/packages/core/base)        | Adapter interfaces, error types, and common utilities     | [`@solana/wallet-adapter-base`](https://npmjs.com/package/@solana/wallet-adapter-base)         |
-| [react](https://github.com/solana-labs/wallet-adapter/tree/master/packages/core/react)      | Contexts and hooks for React dApps                        | [`@solana/wallet-adapter-react`](https://npmjs.com/package/@solana/wallet-adapter-react)       |
+| [base](https://github.com/solana-labs/wallet-adapter/tree/master/packages/core/base)        | Adapter interfaces, error types, and common utilities     | [`@tomlisankie/wallet-adapter-base`](https://npmjs.com/package/@tomlisankie/wallet-adapter-base)         |
+| [react](https://github.com/solana-labs/wallet-adapter/tree/master/packages/core/react)      | Contexts and hooks for React dApps                        | [`@tomlisankie/wallet-adapter-react`](https://npmjs.com/package/@tomlisankie/wallet-adapter-react)       |
 
 ### Wallets
 These packages provide adapters for each wallet.
@@ -157,35 +157,35 @@ You can use the [wallets](https://github.com/solana-labs/wallet-adapter/tree/mas
 
 | package                                                                                               | description                                           | npm                                                                                                  |
 |-------------------------------------------------------------------------------------------------------|-------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [wallets](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/wallets)         | Includes all the wallets (with tree shaking)          | [`@solana/wallet-adapter-wallets`](https://npmjs.com/package/@solana/wallet-adapter-wallets)         |
-| [bitkeep](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/bitkeep)         | Adapter for [BitKeep](https://bitkeep.com)            | [`@solana/wallet-adapter-bitkeep`](https://npmjs.com/package/@solana/wallet-adapter-bitkeep)         |
-| [bitpie](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/bitpie)           | Adapter for [Bitpie](https://bitpie.com)              | [`@solana/wallet-adapter-bitpie`](https://npmjs.com/package/@solana/wallet-adapter-bitpie)           |
-| [blocto](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/blocto)           | Adapter for [Blocto](https://blocto.app)              | [`@solana/wallet-adapter-blocto`](https://npmjs.com/package/@solana/wallet-adapter-blocto)           |
-| [clover](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/clover)           | Adapter for [Clover](https://clover.finance)          | [`@solana/wallet-adapter-clover`](https://npmjs.com/package/@solana/wallet-adapter-clover)           |
-| [coin98](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/coin98)           | Adapter for [Coin98](https://coin98.com)              | [`@solana/wallet-adapter-coin98`](https://npmjs.com/package/@solana/wallet-adapter-coin98)           |
-| [coinhub](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/coinhub)         | Adapter for [Coinhub](https://coinhub.org)            | [`@solana/wallet-adapter-coinhub`](https://npmjs.com/package/@solana/wallet-adapter-coinhub)         |
-| [glow](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/glow)               | Adapter for [Glow](https://glow.app)                  | [`@solana/wallet-adapter-glow`](https://npmjs.com/package/@solana/wallet-adapter-glow)               |
-| [huobi](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/huobi)             | Adapter for [HuobiWallet](https://www.huobiwallet.io) | [`@solana/wallet-adapter-huobi`](https://npmjs.com/package/@solana/wallet-adapter-huobi)             |
-| [glow](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/glow)                      | Adapter for [Glow](https://glow.app)                   | [`@solana/wallet-adapter-glow`](https://npmjs.com/package/@solana/wallet-adapter-glow)                   |
-| [ledger](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/ledger)           | Adapter for [Ledger](https://ledger.com)              | [`@solana/wallet-adapter-ledger`](https://npmjs.com/package/@solana/wallet-adapter-ledger)           |
-| [mathwallet](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/mathwallet)   | Adapter for [MathWallet](https://mathwallet.org)      | [`@solana/wallet-adapter-mathwallet`](https://npmjs.com/package/@solana/wallet-adapter-mathwallet)   |
-| [phantom](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/phantom)         | Adapter for [Phantom](https://phantom.app)            | [`@solana/wallet-adapter-phantom`](https://npmjs.com/package/@solana/wallet-adapter-phantom)         |
-| [safepal](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/safepal)         | Adapter for [SafePal](https://safepal.io)             | [`@solana/wallet-adapter-safepal`](https://npmjs.com/package/@solana/wallet-adapter-safepal)         |
-| [slope](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/slope)             | Adapter for [Slope](https://slope.finance)            | [`@solana/wallet-adapter-slope`](https://npmjs.com/package/@solana/wallet-adapter-slope)             |
-| [solflare](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/solflare)       | Adapter for [Solflare](https://solflare.com)          | [`@solana/wallet-adapter-solflare`](https://npmjs.com/package/@solana/wallet-adapter-solflare)       |
-| [sollet](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/sollet)           | Adapter for [Sollet](https://www.sollet.io)           | [`@solana/wallet-adapter-sollet`](https://npmjs.com/package/@solana/wallet-adapter-sollet)           |
-| [solong](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/solong)           | Adapter for [Solong](https://solongwallet.com)        | [`@solana/wallet-adapter-solong`](https://npmjs.com/package/@solana/wallet-adapter-solong)           |
-| [tokenpocket](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/tokenpocket) | Adapter for [TokenPocket](https://tokenpocket.pro)    | [`@solana/wallet-adapter-tokenpocket`](https://npmjs.com/package/@solana/wallet-adapter-tokenpocket) |
-| [torus](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/torus)             | Adapter for [Torus](https://tor.us)                   | [`@solana/wallet-adapter-torus`](https://npmjs.com/package/@solana/wallet-adapter-torus)             |
+| [wallets](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/wallets)         | Includes all the wallets (with tree shaking)          | [`@tomlisankie/wallet-adapter-wallets`](https://npmjs.com/package/@tomlisankie/wallet-adapter-wallets)         |
+| [bitkeep](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/bitkeep)         | Adapter for [BitKeep](https://bitkeep.com)            | [`@tomlisankie/wallet-adapter-bitkeep`](https://npmjs.com/package/@tomlisankie/wallet-adapter-bitkeep)         |
+| [bitpie](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/bitpie)           | Adapter for [Bitpie](https://bitpie.com)              | [`@tomlisankie/wallet-adapter-bitpie`](https://npmjs.com/package/@tomlisankie/wallet-adapter-bitpie)           |
+| [blocto](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/blocto)           | Adapter for [Blocto](https://blocto.app)              | [`@tomlisankie/wallet-adapter-blocto`](https://npmjs.com/package/@tomlisankie/wallet-adapter-blocto)           |
+| [clover](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/clover)           | Adapter for [Clover](https://clover.finance)          | [`@tomlisankie/wallet-adapter-clover`](https://npmjs.com/package/@tomlisankie/wallet-adapter-clover)           |
+| [coin98](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/coin98)           | Adapter for [Coin98](https://coin98.com)              | [`@tomlisankie/wallet-adapter-coin98`](https://npmjs.com/package/@tomlisankie/wallet-adapter-coin98)           |
+| [coinhub](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/coinhub)         | Adapter for [Coinhub](https://coinhub.org)            | [`@tomlisankie/wallet-adapter-coinhub`](https://npmjs.com/package/@tomlisankie/wallet-adapter-coinhub)         |
+| [glow](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/glow)               | Adapter for [Glow](https://glow.app)                  | [`@tomlisankie/wallet-adapter-glow`](https://npmjs.com/package/@tomlisankie/wallet-adapter-glow)               |
+| [huobi](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/huobi)             | Adapter for [HuobiWallet](https://www.huobiwallet.io) | [`@tomlisankie/wallet-adapter-huobi`](https://npmjs.com/package/@tomlisankie/wallet-adapter-huobi)             |
+| [glow](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/glow)                      | Adapter for [Glow](https://glow.app)                   | [`@tomlisankie/wallet-adapter-glow`](https://npmjs.com/package/@tomlisankie/wallet-adapter-glow)                   |
+| [ledger](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/ledger)           | Adapter for [Ledger](https://ledger.com)              | [`@tomlisankie/wallet-adapter-ledger`](https://npmjs.com/package/@tomlisankie/wallet-adapter-ledger)           |
+| [mathwallet](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/mathwallet)   | Adapter for [MathWallet](https://mathwallet.org)      | [`@tomlisankie/wallet-adapter-mathwallet`](https://npmjs.com/package/@tomlisankie/wallet-adapter-mathwallet)   |
+| [phantom](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/phantom)         | Adapter for [Phantom](https://phantom.app)            | [`@tomlisankie/wallet-adapter-phantom`](https://npmjs.com/package/@tomlisankie/wallet-adapter-phantom)         |
+| [safepal](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/safepal)         | Adapter for [SafePal](https://safepal.io)             | [`@tomlisankie/wallet-adapter-safepal`](https://npmjs.com/package/@tomlisankie/wallet-adapter-safepal)         |
+| [slope](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/slope)             | Adapter for [Slope](https://slope.finance)            | [`@tomlisankie/wallet-adapter-slope`](https://npmjs.com/package/@tomlisankie/wallet-adapter-slope)             |
+| [solflare](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/solflare)       | Adapter for [Solflare](https://solflare.com)          | [`@tomlisankie/wallet-adapter-solflare`](https://npmjs.com/package/@tomlisankie/wallet-adapter-solflare)       |
+| [sollet](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/sollet)           | Adapter for [Sollet](https://www.sollet.io)           | [`@tomlisankie/wallet-adapter-sollet`](https://npmjs.com/package/@tomlisankie/wallet-adapter-sollet)           |
+| [solong](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/solong)           | Adapter for [Solong](https://solongwallet.com)        | [`@tomlisankie/wallet-adapter-solong`](https://npmjs.com/package/@tomlisankie/wallet-adapter-solong)           |
+| [tokenpocket](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/tokenpocket) | Adapter for [TokenPocket](https://tokenpocket.pro)    | [`@tomlisankie/wallet-adapter-tokenpocket`](https://npmjs.com/package/@tomlisankie/wallet-adapter-tokenpocket) |
+| [torus](https://github.com/solana-labs/wallet-adapter/tree/master/packages/wallets/torus)             | Adapter for [Torus](https://tor.us)                   | [`@tomlisankie/wallet-adapter-torus`](https://npmjs.com/package/@tomlisankie/wallet-adapter-torus)             |
 
 ### UI Components
 These packages provide components for common UI frameworks.
 
 | package                                                                                                   | description                                                        | npm                                                                                                        |
 | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
-| [react-ui](https://github.com/solana-labs/wallet-adapter/tree/master/packages/ui/react-ui)                | Components for React (no UI framework, just CSS)                   | [`@solana/wallet-adapter-react-ui`](https://npmjs.com/package/@solana/wallet-adapter-react-ui)             |
-| [material-ui](https://github.com/solana-labs/wallet-adapter/tree/master/packages/ui/material-ui)          | Components for [Material UI](https://material-ui.com) with React   | [`@solana/wallet-adapter-material-ui`](https://npmjs.com/package/@solana/wallet-adapter-material-ui)       |
-| [ant-design](https://github.com/solana-labs/wallet-adapter/tree/master/packages/ui/ant-design)            | Components for [Ant Design](https://ant.design) with React         | [`@solana/wallet-adapter-ant-design`](https://npmjs.com/package/@solana/wallet-adapter-ant-design)         |
+| [react-ui](https://github.com/solana-labs/wallet-adapter/tree/master/packages/ui/react-ui)                | Components for React (no UI framework, just CSS)                   | [`@tomlisankie/wallet-adapter-react-ui`](https://npmjs.com/package/@tomlisankie/wallet-adapter-react-ui)             |
+| [material-ui](https://github.com/solana-labs/wallet-adapter/tree/master/packages/ui/material-ui)          | Components for [Material UI](https://material-ui.com) with React   | [`@tomlisankie/wallet-adapter-material-ui`](https://npmjs.com/package/@tomlisankie/wallet-adapter-material-ui)       |
+| [ant-design](https://github.com/solana-labs/wallet-adapter/tree/master/packages/ui/ant-design)            | Components for [Ant Design](https://ant.design) with React         | [`@tomlisankie/wallet-adapter-ant-design`](https://npmjs.com/package/@tomlisankie/wallet-adapter-ant-design)         |
 | [angular-material-ui](https://github.com/heavy-duty/platform/tree/master/libs/wallet-adapter/ui/material) | Components for [Angular Material UI](https://material.angular.io/) | [`@heavy-duty/wallet-adapter-material`](https://www.npmjs.com/package/@heavy-duty/wallet-adapter-material) |
 
 ### Starter Projects
@@ -194,10 +194,10 @@ Alternatively, check out [solana-dapp-next](https://github.com/lisenmayben/solan
 
 | package                                                                                                               | description                                                                | npm                                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| [example](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/example)                         | Demo of UI components                                                      | [`@solana/wallet-adapter-example`](https://npmjs.com/package/@solana/wallet-adapter-example)                         |
-| [material-ui-starter](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/material-ui-starter) | [Create React App](https://create-react-app.dev) project using Material UI | [`@solana/wallet-adapter-material-ui-starter`](https://npmjs.com/package/@solana/wallet-adapter-material-ui-starter) |
-| [react-ui-starter](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/react-ui-starter)       | [Create React App](https://create-react-app.dev) project using React UI    | [`@solana/wallet-adapter-react-ui-starter`](https://npmjs.com/package/@solana/wallet-adapter-react-ui-starter)       |
-| [nextjs-starter](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/nextjs-starter)           | [Next.js](https://nextjs.org) project using React                          | [`@solana/wallet-adapter-nextjs-starter`](https://npmjs.com/package/@solana/wallet-adapter-nextjs-starter)           |
+| [example](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/example)                         | Demo of UI components                                                      | [`@tomlisankie/wallet-adapter-example`](https://npmjs.com/package/@tomlisankie/wallet-adapter-example)                         |
+| [material-ui-starter](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/material-ui-starter) | [Create React App](https://create-react-app.dev) project using Material UI | [`@tomlisankie/wallet-adapter-material-ui-starter`](https://npmjs.com/package/@tomlisankie/wallet-adapter-material-ui-starter) |
+| [react-ui-starter](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/react-ui-starter)       | [Create React App](https://create-react-app.dev) project using React UI    | [`@tomlisankie/wallet-adapter-react-ui-starter`](https://npmjs.com/package/@tomlisankie/wallet-adapter-react-ui-starter)       |
+| [nextjs-starter](https://github.com/solana-labs/wallet-adapter/tree/master/packages/starter/nextjs-starter)           | [Next.js](https://nextjs.org) project using React                          | [`@tomlisankie/wallet-adapter-nextjs-starter`](https://npmjs.com/package/@tomlisankie/wallet-adapter-nextjs-starter)           |
 
 ### Community
 Several packages are maintained by the community to support additional frontend frameworks.

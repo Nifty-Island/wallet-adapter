@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-sollet`
+# `@tomlisankie/wallet-adapter-sollet`
 
 <!-- @TODO -->
 

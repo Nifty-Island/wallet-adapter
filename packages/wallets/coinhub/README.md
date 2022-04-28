@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-coinhub`
+# `@tomlisankie/wallet-adapter-coinhub`
 
 <!-- @TODO -->
 

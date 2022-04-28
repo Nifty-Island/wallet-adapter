@@ -12,8 +12,8 @@ import {
     styled,
     Theme,
 } from '@mui/material';
-import { WalletName } from '@solana/wallet-adapter-base';
-import { useWallet } from '@solana/wallet-adapter-react';
+import { WalletName } from '@tomlisankie/wallet-adapter-base';
+import { useWallet } from '@tomlisankie/wallet-adapter-react';
 import React, { FC, ReactElement, SyntheticEvent, useCallback, useMemo, useState } from 'react';
 import { useWalletDialog } from './useWalletDialog';
 import { WalletListItem } from './WalletListItem';

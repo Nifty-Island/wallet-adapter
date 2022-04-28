@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-safepal`
+# `@tomlisankie/wallet-adapter-safepal`
 
 <!-- @TODO -->
 

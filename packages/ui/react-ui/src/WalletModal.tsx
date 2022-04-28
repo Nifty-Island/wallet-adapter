@@ -1,5 +1,5 @@
-import { WalletName, WalletReadyState } from '@solana/wallet-adapter-base';
-import { useWallet, Wallet } from '@solana/wallet-adapter-react';
+import { WalletName, WalletReadyState } from '@tomlisankie/wallet-adapter-base';
+import { useWallet, Wallet } from '@tomlisankie/wallet-adapter-react';
 import React, { FC, MouseEvent, useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Collapse } from './Collapse';

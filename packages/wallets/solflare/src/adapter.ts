@@ -13,7 +13,7 @@ import {
     WalletPublicKeyError,
     WalletReadyState,
     WalletSignTransactionError,
-} from '@solana/wallet-adapter-base';
+} from '@tomlisankie/wallet-adapter-base';
 import { PublicKey, Transaction } from '@solana/web3.js';
 import type Solflare from '@solflare-wallet/sdk';
 

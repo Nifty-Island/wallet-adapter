@@ -1,4 +1,4 @@
-# `@solana/wallet-adapter-ant-design`
+# `@tomlisankie/wallet-adapter-ant-design`
 
 # Quick Setup (using Create-React-App with craco-less)
 See the [example](https://github.com/solana-labs/wallet-adapter/tree/master/packages/example) package for more usage.
@@ -37,10 +37,10 @@ yarn add antd \
 4. Install these dependencies:
 
 ```
-yarn add @solana/wallet-adapter-wallets \
-         @solana/wallet-adapter-react \
-         @solana/wallet-adapter-ant-design \
-         @solana/wallet-adapter-base
+yarn add @tomlisankie/wallet-adapter-wallets \
+         @tomlisankie/wallet-adapter-react \
+         @tomlisankie/wallet-adapter-ant-design \
+         @tomlisankie/wallet-adapter-base
 ```
 
 

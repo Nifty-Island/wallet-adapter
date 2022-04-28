@@ -18,7 +18,7 @@ import {
     WalletTimeoutError,
     WalletWindowBlockedError,
     WalletWindowClosedError,
-} from '@solana/wallet-adapter-base';
+} from '@tomlisankie/wallet-adapter-base';
 import { PublicKey, Transaction } from '@solana/web3.js';
 
 interface SolletWallet {
