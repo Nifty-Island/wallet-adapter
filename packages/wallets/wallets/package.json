@@ -1,6 +1,6 @@
 {
     "name": "@tomlisankie/wallet-adapter-wallets",
-    "version": "0.16.0",
+    "version": "0.17.0",
     "author": "Solana Maintainers <maintainers@solana.foundation>",
     "repository": "https://github.com/solana-labs/wallet-adapter",
     "license": "Apache-2.0",
@@ -45,5 +45,6 @@
         "@tomlisankie/wallet-adapter-sollet": "^0.11.0",
         "@tomlisankie/wallet-adapter-solong": "^0.9.2",
         "@tomlisankie/wallet-adapter-tokenpocket": "^0.4.2"
-    }
+    },
+    "gitHead": "bd9b2990664527f1b8871dd9dfc855ccfdd226d1"
 }
