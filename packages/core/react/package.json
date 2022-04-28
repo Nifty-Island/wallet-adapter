@@ -28,8 +28,8 @@
         "postbuild": "echo '{\"type\":\"commonjs\"}' | npx json > lib/cjs/package.json && echo '{\"type\":\"module\"} ' | npx json > lib/esm/package.json"
     },
     "peerDependencies": {
-        "react": "^17.0.0",
-        "@solana/web3.js": "^1.36.0"
+        "@solana/web3.js": "^1.36.0",
+        "react": "^17.0.0"
     },
     "dependencies": {
         "@tomlisankie/wallet-adapter-base": "^0.9.4"
@@ -42,5 +42,6 @@
         "jest-localstorage-mock": "^2.4.18",
         "react": "^17.0.0",
         "ts-jest": "^27.0.0"
-    }
+    },
+    "gitHead": "bd9b2990664527f1b8871dd9dfc855ccfdd226d1"
 }

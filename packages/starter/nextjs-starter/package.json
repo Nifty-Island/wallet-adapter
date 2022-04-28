@@ -42,5 +42,6 @@
         "eslint-config-next": "^12.0.7",
         "shx": "^0.3.3",
         "typescript": "^4.6.2"
-    }
+    },
+    "gitHead": "bd9b2990664527f1b8871dd9dfc855ccfdd226d1"
 }

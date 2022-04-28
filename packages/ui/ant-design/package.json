@@ -31,9 +31,9 @@
         "postbuild": "echo '{\"type\":\"commonjs\"}' | npx json > lib/cjs/package.json && echo '{\"type\":\"module\"} ' | npx json > lib/esm/package.json"
     },
     "peerDependencies": {
+        "@solana/web3.js": "^1.36.0",
         "react": "^17.0.0",
-        "react-dom": "^17.0.0",
-        "@solana/web3.js": "^1.36.0"
+        "react-dom": "^17.0.0"
     },
     "dependencies": {
         "@ant-design/icons": "^4.0.0",
@@ -47,5 +47,6 @@
         "@types/react-dom": "^17.0.0",
         "react": "^17.0.0",
         "react-dom": "^17.0.0"
-    }
+    },
+    "gitHead": "bd9b2990664527f1b8871dd9dfc855ccfdd226d1"
 }
